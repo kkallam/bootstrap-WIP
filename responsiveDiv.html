@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Testing Media Queries</title>
+	<link rel="stylesheet" href="responsiveDiv.css">
+</head>
+<body>
+	<header>
+		<h1>Welcome to My Website  
+	</header>
+	<div class="container">
+		<div id="showDiv" onclick="showme()">Show Left Menu</div>
+
+		<div id="leftNav">
+			<h4 id="hideDiv">I am left navigation Menu.If you want to hide me <span onclick="hideme()">Click Here</span></h4>
+		</div>
+
+		<div id="content">
+			<h2> I am here at content Block
+		</div>
+
+		<div id="rightNav">
+			This is right div
+		</div>
+	</div>
+	
+	<script>
+		
+			function hideme(){
+				document.getElementById("hideDiv").style.display = "none";
+				document.getElementById("showDiv").style.display = "block";
+				document.getElementById("content").style.width = "98%";
+				document.getElementById("rightNav").style.display = "none";
+			}
+			function showme(){
+				document.getElementById("hideDiv").style.display = "block";
+				document.getElementById("showDiv").style.display = "none";
+				document.getElementById("content").style.width = "65%";
+				document.getElementById("rightNav").style.display = "block";
+			}
+		
+	</script>
+</body>
+</html>

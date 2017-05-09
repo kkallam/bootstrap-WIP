@@ -1,0 +1,30 @@
+.container{
+	width: 100%;
+}
+#leftNav{
+	width: 15%;
+	background-color: gray;
+	float: left;
+}
+#content{
+	width: 66%;
+	background-color: orange; 
+	float: left;
+	margin: 0 5px;
+}
+#rightNav{
+	width: 15%;
+	background-color: green;
+	float: right;
+}
+#showDiv{
+	display: none; 
+	color:#00A;
+	cursor: pointer;
+}
+#hideDiv{
+	cursor: pointer;
+}
+#hideDiv span{
+	color:red;
+}

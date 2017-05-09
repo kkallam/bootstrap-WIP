@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>Testing Media Queries</title>
+	<link rel="stylesheet" href="responsiveWithMediaQuerry.css">
+</head>
+<body>
+	<header>
+		<h1>Welcome to My Website  
+	</header>
+	<div class="container">
+		<div id="showDiv" onclick="showme()">Show Left Menu</div>
+
+		<div id="leftNav">
+			<h4 id="hideDiv">I am left navigation Menu.If you want to hide me <span onclick="hideme()">Click Here</span></h4>
+		</div>
+
+		<div id="content">
+			<h2> I am here at content Block
+		</div>
+
+		<div id="rightNav">
+			This is right div
+		</div>
+	</div>
+	
+	<script>
+		window.addEventListener("resize", myFunction);
+
+		function myFunction(){
+			if(window.innerWidth<=767){
+				if (document.getElementById("leftNav").style.display == 'none') { 
+				  document.getElementById("content").style.width = "98%";
+				}
+				else{
+					document.getElementById("content").style.width = "82%";
+				}
+			}
+			else{
+				if (document.getElementById("leftNav").style.display == 'none') { 
+				  document.getElementById("content").style.width = "82%";
+				}
+				else{
+					document.getElementById("content").style.width = "62%";
+				}
+			}
+
+		}
+
+		function hideme(){
+			document.getElementById("leftNav").style.display = "none";
+			document.getElementById("showDiv").style.display = "block";
+			
+			if(window.innerWidth<=767){
+				if (document.getElementById("leftNav").style.display == 'none') { 
+				  document.getElementById("content").style.width = "98%";
+				}
+			}
+			else{
+				if (document.getElementById("leftNav").style.display == 'none') { 
+				  document.getElementById("content").style.width = "82%";
+				}
+			}
+		}
+
+		function showme(){
+			document.getElementById("leftNav").style.display = "block";
+			document.getElementById("showDiv").style.display = "none";
+
+			if(window.innerWidth<=767){
+				if (document.getElementById("leftNav").style.display == 'block') {  
+				  document.getElementById("content").style.width = "82%";
+				}
+			}
+			else{
+				document.getElementById("content").style.width = "65%";
+			}
+		}
+		
+	</script>
+</body>
+</html>
